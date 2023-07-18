@@ -37,6 +37,11 @@ h1 {
   cursor: pointer;
 }
 
+.repository-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 .repository-list {
   list-style-type: none;
   padding: 0;

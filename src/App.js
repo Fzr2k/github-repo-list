@@ -27,20 +27,28 @@ function App() {
       });
   };
 
+  const submitFormOnEnterKey = (event) => {
+    if (event.key === 'Enter') {
+      getRepositoryList();
+    }
+  };
+
   return (
     <div className="container">
       <h1>GitHub Repository Fetcher</h1>
       <div className="input-container">
         <input
+          className='input-field'
           type="text"
           value={githubUsername}
           onChange={(e) => setGithubUsername(e.target.value)}
+          onKeyDown={submitFormOnEnterKey}
         />
-        <button onClick={getRepositoryList}>Fetch Repositories</button>
+        <button className="fetch-button" onClick={getRepositoryList}>Fetch Repositories</button>
       </div>
       {showGithubRepositories && (
         <>
-          <ul>
+          <ul className="repository-list repository-container">
             {githubRepositories.map((repo) => (
               <li key={repo.id}>{repo.name}</li>
             ))}
