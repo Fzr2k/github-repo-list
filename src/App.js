@@ -36,6 +36,7 @@ function App() {
   return (
     <div className="container">
       <h1>GitHub Repository Fetcher</h1>
+      <p>Enter your Github username</p>
       <div className="input-container">
         <input
           className='input-field'
@@ -48,7 +49,7 @@ function App() {
       </div>
       {showGithubRepositories && (
         <>
-          <ul className="repository-list repository-container">
+          <ul className="repository-list">
             {githubRepositories.map((repo) => (
               <li key={repo.id}>{repo.name}</li>
             ))}

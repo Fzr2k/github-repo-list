@@ -46,8 +46,16 @@ h1 {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  border: 1px solid #ffffff; /* Add the border style here */
+  border-radius: 4px; /* Optionally, add some border radius for rounded corners */
+  max-height: 200px;
+  overflow-y: auto;
 }
+
 
 .repository-list li {
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
